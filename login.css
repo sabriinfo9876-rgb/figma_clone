@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #f5f5f5;
+}
+
+.container {
+    width: 95%;
+    height: calc(100vh - 40px);
+    margin: 20px auto;
+    background: white;
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+
+
+.left {
+    flex: 1;
+    position: relative;
+}
+
+.left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    left: 40px;
+    bottom: 40px;
+    color: #fff;
+}
+
+
+
+
+
+.right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 70px;
+}
+
+.right h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+
+
+.tabs {
+    width: 240px;
+    margin: 0 auto 35px;
+    background: #8fd7db;
+    border-radius: 40px;
+    display: flex;
+    padding: 5px;
+}
+
+.tabs button {
+    flex: 1;
+    border: none;
+    background: none;
+    padding: 12px;
+    border-radius: 30px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 15px;
+}
+
+.tabs button:hover {
+    background-color: aliceblue;
+    color:  #3cb8bf;;
+}
+
+.login-btn:hover {
+    background-color: aliceblue;
+    color:  #3cb8bf;;
+
+}
+
+.tabs .active {
+    background: #3cb8bf;
+}
+
+.text {
+    color: #666;
+    line-height: 25px;
+    margin-bottom: 30px;
+}
+
+
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #53c8d2;
+    border-radius: 30px;
+    outline: none;
+    margin-bottom: 25px;
+}
+
+
+
+.password {
+    position: relative;
+}
+
+.password i {
+    position: absolute;
+    right: 20px;
+    top: 16px;
+    cursor: pointer;
+}
+
+
+
+.remember {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    font-size: 14px;
+}
+
+.remember div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.remember input {
+    width: auto;
+    margin: 0;
+}
+
+.remember a {
+    text-decoration: none;
+    color: #555;
+}
+
+
+
+.login-btn {
+    width: 180px;
+    margin: auto;
+    padding: 15px;
+    border: none;
+    background: #43bcc5;
+    color: #fff;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+@media(max-width:900px) {
+
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .left {
+        height: 350px;
+    }
+
+    .right {
+        padding: 40px;
+    }
+
+    .overlay h1 {
+        font-size: 28px;
+    }
+
+}
