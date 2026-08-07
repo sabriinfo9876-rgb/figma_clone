@@ -696,7 +696,7 @@ image-cont2:hover img {
 }
 
 .nav-links1 .a1:hover,
-.nav-links .a1.active1 {
+.nav-links1 a.active1 {
   color: #49bbbd;
   font-weight: 600;
 }
@@ -1716,8 +1716,7 @@ image-cont2:hover img {
 .footer{
   min-height:auto;
   width: 100% !important;
-  margin:0;
-  padding:0;
+  margin: 0;
 }
 * {
   margin: 0;
@@ -2753,13 +2752,6 @@ body {
   }
 }
 
-/* ========================================================
-   RESPONSIVE ENHANCEMENTS (added — makes every section
-   listed above adapt cleanly across desktop, tablet and
-   mobile without touching any existing class name/markup)
-   ======================================================== */
-
-/* --- Global safety net so nothing overflows horizontally --- */
 html, body {
   max-width: 100%;
   overflow-x: hidden;
@@ -2767,8 +2759,6 @@ html, body {
 img {
   max-width: 100%;
 }
-
-/* ---------------- Landing navbar (index.html) ---------------- */
 @media (max-width: 992px) {
   .hero-container {
     padding: 5px 5% 60px 5%;
@@ -2801,36 +2791,40 @@ img {
   }
 }
 
-/* ---------------- Hero images (index.html) ---------------- */
 @media (max-width: 992px) {
+  .hero-image {
+    position: relative;
+  }
   .hero-image img {
-    max-width: 100%;
     height: auto;
     margin-right: 0;
   }
   .hero-image .stu {
     max-width: 320px;
+    width: 100%;
   }
   .group-pic {
-    display: none;
-  }
-}
-@media (min-width: 993px) {
-  .hero-image .stu {
-    max-width: 100%;
-  }
-  .group-pic {
+    position: absolute !important;
+    top: 8px !important;
     left: auto !important;
-    right: 20px;
+    right: 6px !important;
+    width: 110px !important;
+    height: 130px !important;
+    max-width: 110px;
   }
 }
 @media (max-width: 576px) {
   .hero-image .stu {
     max-width: 240px;
   }
+  .group-pic {
+    width: 90px !important;
+    height: 105px !important;
+    top: 4px !important;
+    right: 4px !important;
+  }
 }
 
-/* ---------------- Our Success ratings ---------------- */
 @media (max-width: 768px) {
   .success {
     font-size: 34px;
@@ -2856,8 +2850,6 @@ img {
     gap: 18px;
   }
 }
-
-/* ---------------- Cloud software cards ---------------- */
 @media (max-width: 768px) {
   .cloud, .software {
     font-size: 24px;
@@ -2871,7 +2863,6 @@ img {
   }
 }
 
-/* ---------------- What is TOTC / instructor-student cards ---------------- */
 @media (max-width: 900px) {
   .cont1 {
     flex-direction: column;
@@ -2899,8 +2890,6 @@ img {
   }
 }
 
-/* card-container (Everything you can do...) already collapses to
-   1fr at 768px via existing rule; just tidy the image below that */
 @media (max-width: 768px) {
   .classroom-img {
     max-width: 100%;
@@ -2910,7 +2899,6 @@ img {
   }
 }
 
-/* ---------------- Classroom UI feature block ---------------- */
 @media (max-width: 768px) {
   .classroom-ui-sec, .tools-ui-sec {
     padding: 50px 0;
@@ -2932,7 +2920,6 @@ img {
   }
 }
 
-/* ---------------- Tools for teachers block ---------------- */
 @media (max-width: 768px) {
   .tools-feature-title {
     font-size: 26px;
@@ -2941,8 +2928,6 @@ img {
     height: 300px;
   }
 }
-
-/* Assessments / Class Management / One-on-One rows (.group / .group1) */
 @media (max-width: 900px) {
   .group, .group1 {
     flex-direction: column !important;
@@ -2964,7 +2949,6 @@ img {
   }
 }
 
-/* ---------------- Testimonial section ---------------- */
 @media (max-width: 768px) {
   .main-title {
     font-size: 30px;
@@ -2997,8 +2981,6 @@ img {
     justify-content: center;
   }
 }
-
-/* ---------------- News section ---------------- */
 @media (max-width: 768px) {
   .section-title {
     font-size: 26px;
@@ -3007,8 +2989,6 @@ img {
     font-size: 18px;
   }
 }
-
-/* ---------------- Footer ---------------- */
 @media (max-width: 576px) {
   .logo-ft {
     flex-direction: column;
@@ -3020,8 +3000,6 @@ img {
     text-align: center;
   }
 }
-
-/* ============ course.html (all courses page) ============ */
 @media (max-width: 992px) {
   .navbar1 {
     padding: 14px 20px;
@@ -3101,7 +3079,6 @@ img {
   }
 }
 
-/* ---------------- Platform section ---------------- */
 @media (max-width: 992px) {
   .platform-container {
     text-align: center;
@@ -3121,8 +3098,6 @@ img {
     max-width: 480px;
   }
 }
-
-/* ---------------- Students say / girl block ---------------- */
 @media (max-width: 992px) {
   .girl-main-img {
     width: 260px !important;
@@ -3140,7 +3115,6 @@ img {
   }
 }
 
-/* ---------------- Laptop / deals section ---------------- */
 @media (max-width: 992px) {
   .heading span {
     padding: 20px 0 !important;
@@ -3156,8 +3130,6 @@ img {
     padding: 20px 10px;
   }
 }
-
-/* ---------------- Extra small phones ---------------- */
 @media (max-width: 375px) {
   .hero-text h1 {
     font-size: 26px;
@@ -3170,5 +3142,32 @@ img {
   }
   .card {
     padding: 50px 15px 25px;
+  }
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #49BBBD;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.navbar1 {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  margin: 0;
+}
+@media (max-width: 992px) {
+  .nav-links {
+    display: flex !important;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 20px;
+  }
+  .nav-links a {
+    font-size: 14px;
   }
 }
