@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -2751,5 +2750,425 @@ body {
   .card-container {
     grid-template-columns: 1fr; 
     gap: 30px;
+  }
+}
+
+/* ========================================================
+   RESPONSIVE ENHANCEMENTS (added — makes every section
+   listed above adapt cleanly across desktop, tablet and
+   mobile without touching any existing class name/markup)
+   ======================================================== */
+
+/* --- Global safety net so nothing overflows horizontally --- */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+img {
+  max-width: 100%;
+}
+
+/* ---------------- Landing navbar (index.html) ---------------- */
+@media (max-width: 992px) {
+  .hero-container {
+    padding: 5px 5% 60px 5%;
+  }
+  .nav {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+  }
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px 20px;
+  }
+  .auth-buttons {
+    justify-content: center;
+  }
+}
+@media (max-width: 480px) {
+  .totc-logo {
+    width: auto;
+  }
+  .auth-buttons {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+  .btn {
+    text-align: center;
+  }
+}
+
+/* ---------------- Hero images (index.html) ---------------- */
+@media (max-width: 992px) {
+  .hero-image img {
+    max-width: 100%;
+    height: auto;
+    margin-right: 0;
+  }
+  .hero-image .stu {
+    max-width: 320px;
+  }
+  .group-pic {
+    display: none;
+  }
+}
+@media (min-width: 993px) {
+  .hero-image .stu {
+    max-width: 100%;
+  }
+  .group-pic {
+    left: auto !important;
+    right: 20px;
+  }
+}
+@media (max-width: 576px) {
+  .hero-image .stu {
+    max-width: 240px;
+  }
+}
+
+/* ---------------- Our Success ratings ---------------- */
+@media (max-width: 768px) {
+  .success {
+    font-size: 34px;
+  }
+  .para {
+    font-size: 15px;
+  }
+  .rating {
+    gap: 24px;
+  }
+  .item span {
+    font-size: 44px;
+  }
+  .item p {
+    font-size: 18px;
+  }
+}
+@media (max-width: 420px) {
+  .item span {
+    font-size: 36px;
+  }
+  .rating {
+    gap: 18px;
+  }
+}
+
+/* ---------------- Cloud software cards ---------------- */
+@media (max-width: 768px) {
+  .cloud, .software {
+    font-size: 24px;
+  }
+  .section {
+    padding: 40px 15px;
+  }
+  .card {
+    width: 100%;
+    max-width: 340px;
+  }
+}
+
+/* ---------------- What is TOTC / instructor-student cards ---------------- */
+@media (max-width: 900px) {
+  .cont1 {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  .image-cont2 {
+    width: 90%;
+    max-width: 400px;
+  }
+  .image-cont2 img {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 768px) {
+  .toco1 {
+    font-size: 28px;
+  }
+  .toco {
+    font-size: 24px;
+  }
+  .para3 {
+    font-size: 15px;
+  }
+}
+
+/* card-container (Everything you can do...) already collapses to
+   1fr at 768px via existing rule; just tidy the image below that */
+@media (max-width: 768px) {
+  .classroom-img {
+    max-width: 100%;
+  }
+  .blue {
+    font-size: 26px;
+  }
+}
+
+/* ---------------- Classroom UI feature block ---------------- */
+@media (max-width: 768px) {
+  .classroom-ui-sec, .tools-ui-sec {
+    padding: 50px 0;
+  }
+  .h1 {
+    font-size: 30px !important;
+  }
+}
+@media (max-width: 560px) {
+  .feeds-canvas-layout {
+    flex-direction: column;
+  }
+  .main-host-feed {
+    aspect-ratio: 16 / 10;
+  }
+  .sub-feeds-grid-stack {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+
+/* ---------------- Tools for teachers block ---------------- */
+@media (max-width: 768px) {
+  .tools-feature-title {
+    font-size: 26px;
+  }
+  .visual-student-column {
+    height: 300px;
+  }
+}
+
+/* Assessments / Class Management / One-on-One rows (.group / .group1) */
+@media (max-width: 900px) {
+  .group, .group1 {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 25px;
+  }
+  .group img, .group1 img, .group1 > img {
+    height: auto !important;
+    width: 100% !important;
+    max-width: 380px !important;
+  }
+  .group h1, .group1 h1 {
+    font-size: 24px !important;
+  }
+}
+@media (max-width: 480px) {
+  .group h1, .group1 h1 {
+    font-size: 20px !important;
+  }
+}
+
+/* ---------------- Testimonial section ---------------- */
+@media (max-width: 768px) {
+  .main-title {
+    font-size: 30px;
+  }
+  .visual-col {
+    justify-content: center;
+  }
+  .image-wrapper {
+    max-width: 320px;
+  }
+  .main-img {
+    width: 100%;
+    height: auto;
+  }
+  .review-card {
+    left: 10px;
+    right: 10px;
+    bottom: -30px;
+    padding: 16px;
+  }
+  .next-btn {
+    right: -10px;
+  }
+}
+@media (max-width: 480px) {
+  .content-col {
+    text-align: center;
+  }
+  .sub-title-wrapper {
+    justify-content: center;
+  }
+}
+
+/* ---------------- News section ---------------- */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 26px;
+  }
+  .featured-title {
+    font-size: 18px;
+  }
+}
+
+/* ---------------- Footer ---------------- */
+@media (max-width: 576px) {
+  .logo-ft {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .ft {
+    border-left: none;
+    margin-left: 0;
+    text-align: center;
+  }
+}
+
+/* ============ course.html (all courses page) ============ */
+@media (max-width: 992px) {
+  .navbar1 {
+    padding: 14px 20px;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+  }
+  .nav-links1 {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+}
+@media (max-width: 480px) {
+  .user-profile .username {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-search-section {
+    height: auto;
+    padding: 24px 16px;
+  }
+  .search-box {
+    flex-direction: column;
+    padding: 10px;
+    gap: 8px;
+  }
+  .search-box input {
+    width: 100%;
+    padding: 10px 12px;
+  }
+  .btn-search {
+    width: 100%;
+    padding: 12px;
+  }
+  .filter-bar select {
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .allcourses-wrapper-sec {
+    margin: 20px !important;
+    padding: 20px !important;
+  }
+}
+@media (max-width: 480px) {
+  .allcourses-wrapper-sec {
+    margin: 12px !important;
+    padding: 16px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .rec-section-wrapper {
+    padding: 50px 0 !important;
+  }
+  .rec-section-title {
+    font-size: 20px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .creators-block {
+    padding: 40px 0 20px 0;
+  }
+  .creators-title {
+    font-size: 20px;
+  }
+  .creators-top-bar {
+    margin-bottom: 45px;
+  }
+}
+
+/* ---------------- Platform section ---------------- */
+@media (max-width: 992px) {
+  .platform-container {
+    text-align: center;
+    padding: 30px 20px;
+  }
+  .features-list li {
+    justify-content: center;
+  }
+}
+@media (max-width: 768px) {
+  .main-heading {
+    font-size: 26px;
+  }
+  .platform-section img.graphic-img {
+    height: auto !important;
+    width: 100% !important;
+    max-width: 480px;
+  }
+}
+
+/* ---------------- Students say / girl block ---------------- */
+@media (max-width: 992px) {
+  .girl-main-img {
+    width: 260px !important;
+    height: auto !important;
+    max-width: 80%;
+  }
+}
+@media (max-width: 576px) {
+  .girl-main-img {
+    width: 100% !important;
+    max-width: 280px;
+  }
+  .div-img {
+    padding: 24px 16px;
+  }
+}
+
+/* ---------------- Laptop / deals section ---------------- */
+@media (max-width: 992px) {
+  .heading span {
+    padding: 20px 0 !important;
+  }
+}
+@media (max-width: 768px) {
+  .laptop {
+    min-height: auto;
+    padding: 24px 0;
+  }
+  .top {
+    font-size: 22px;
+    padding: 20px 10px;
+  }
+}
+
+/* ---------------- Extra small phones ---------------- */
+@media (max-width: 375px) {
+  .hero-text h1 {
+    font-size: 26px;
+  }
+  .success {
+    font-size: 26px;
+  }
+  .cloud, .software, .toco1 {
+    font-size: 20px;
+  }
+  .card {
+    padding: 50px 15px 25px;
   }
 }
