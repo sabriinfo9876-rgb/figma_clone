@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
 }
 
 body {
@@ -172,6 +173,7 @@ input {
     border-radius: 30px;
     cursor: pointer;
     font-size: 16px;
+    text-align: center;
 }
 
 @media(max-width:900px) {
